@@ -32,7 +32,32 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 50px;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #282c34;
+  text-decoration: none;
+}
+
+.navbar {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.navbar:hover {
+  color: #61dafb;
+  transition: 0.5s;
 }
