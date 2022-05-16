@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Home from "./components/Home";
@@ -8,12 +8,24 @@ const App = () => {
   return (
     <div className="App">
       <nav>
-        <Link className="navbar" to="/">
+        <NavLink
+          style={({ isActive }) =>
+            isActive ? { color: "#61dafb" } : { color: "#fff" }
+          }
+          className="navbar"
+          to="/"
+        >
           Home
-        </Link>
-        <Link className="navbar" to="/about">
+        </NavLink>
+        <NavLink
+          style={({ isActive }) =>
+            isActive ? { color: "#61dafb" } : { color: "#fff" }
+          }
+          className="navbar"
+          to="/about"
+        >
           About
-        </Link>
+        </NavLink>
       </nav>
       <br />
       <Routes>
